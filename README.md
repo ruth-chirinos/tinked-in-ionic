@@ -142,3 +142,5 @@ ionic serve
 Please review the documentation about how run in Cordova or Capacitor 
 * [Capacitor](https://ionicframework.com/docs/cli/commands/capacitor-add)
 * [Cordova](https://ionicframework.com/docs/cli/commands/cordova-build)
+
+#####  ** Nunca pares de aprender **
