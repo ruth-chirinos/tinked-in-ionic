@@ -1,0 +1,31 @@
+<ion-header>
+    <app-header (chatClickEvent)="goToChat()" (homeClickEvent)="goToHome()" (profileClickEvent)="goToProfile()">
+    </app-header>
+</ion-header>
+<ion-content [scrollX]="false" [scrollY]="false">
+    <app-tinder-ui [cards]="cards" (likeEvent)="like($event)" (dislikeEvent)="dislike($event)"
+                   (passEvent)="passed($event)"></app-tinder-ui>
+
+    <!--<ion-list>
+        <ion-item-sliding *ngFor="let card of cards">
+            <ion-item-options side="start">
+                <ion-item-option (click)="dislike(card)">Dislike</ion-item-option>
+                <ion-item-option color="danger" (click)="passed(card)">Passed</ion-item-option>
+            </ion-item-options>
+
+            <ion-item>
+                <ion-thumbnail slot="start">
+                    <ion-img [src]="card.image"></ion-img>
+                </ion-thumbnail>
+                <div class="custom-class">
+                    <p>{{card.title}}</p>
+                    <p>{{card.shortDescription}}</p>
+                </div>
+            </ion-item>
+
+            <ion-item-options side="end">
+                <ion-item-option (click)="like(card)">Like</ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>-->
+</ion-content>

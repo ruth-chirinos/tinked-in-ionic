@@ -1,0 +1,21 @@
+:host {
+  width: 100%;
+  padding: 10px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+      }
+    }
+  }
+}

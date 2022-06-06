@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="true" [scrollX]="false" [scrollY]="false">
+    <ion-slides pager="true" no-bounce>
+        <ion-slide *ngFor="let slide of slides">
+            <div class="guide">
+                <img [src]="slide.icon">
+                <p *ngIf="slide.text">{{slide.text}}</p>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

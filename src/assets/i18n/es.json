@@ -1,0 +1,22 @@
+{
+  "global": {
+    "appName": "TinkedIn",
+    "back": "Atrás"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "components": {
+  },
+  "pages": {
+    "guide": {
+      "slide1": "Consigue una entrevista!",
+      "slide2": "Contáctate en privado con Reclutadores",
+      "slide3": "Prepara y envía tu CV",
+      "slide4": "Recibe notificaciones y alertas sobre el estado de tu postulación"
+    },
+    "home": {
+    }
+  }
+}

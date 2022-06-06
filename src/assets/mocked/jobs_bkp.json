@@ -1,0 +1,53 @@
+[
+  {
+    "uuid": "1",
+    "country": "Bolivia",
+    "city": "La Paz",
+    "accuracy": 0.8,
+    "random": false,
+    "card": {
+      "image": "https://firebasestorage.googleapis.com/v0/b/tinked-in.appspot.com/o/jobs%2Fpost1.jpg?alt=media",
+      "title": "Demo card 1",
+      "shortDescription": "This is a demo for Tinder like swipe cards"
+    },
+    "tags": [
+      "Android",
+      "ML",
+      "Ionic"
+    ]
+  },
+  {
+    "uuid": "2",
+    "country": "Bolivia",
+    "city": "La Paz",
+    "accuracy": 0.78,
+    "random": false,
+    "card": {
+      "image": "https://firebasestorage.googleapis.com/v0/b/tinked-in.appspot.com/o/jobs%2Fpost2.jpg?alt=media",
+      "title": "Demo card 2",
+      "shortDescription": "This is a demo for Tinder like swipe cards"
+    },
+    "tags": [
+      "Android",
+      "ML",
+      "Ionic"
+    ]
+  },
+  {
+    "uuid": "3",
+    "country": "Bolivia",
+    "city": "La Paz",
+    "accuracy": 0.8,
+    "random": false,
+    "card": {
+      "image": "https://firebasestorage.googleapis.com/v0/b/tinked-in.appspot.com/o/jobs%2Fpost3.jpg?alt=media",
+      "title": "Demo card 3",
+      "shortDescription": "This is a demo for Tinder like swipe cards"
+    },
+    "tags": [
+      "Android",
+      "ML",
+      "Ionic"
+    ]
+  }
+]

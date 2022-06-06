@@ -1,0 +1,7 @@
+{
+  "name": "TinkedIn",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
