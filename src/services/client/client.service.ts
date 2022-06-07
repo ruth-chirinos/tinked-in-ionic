@@ -1,15 +1,19 @@
-import {Inject, Injectable} from '@angular/core';
-import {UserModel} from '../../model/user.model';
-import {RecommendationModel} from '../../model/recommendation.model';
-import {Observable} from 'rxjs';
-import {RecommendationService} from '../recommendation/recommendation.service';
-import {ClientI} from '../../model/interfaces/client-i.model';
-import {JobPostModel} from '../../model/job-post.model';
+import { Inject, Injectable } from '@angular/core';
+import { UserModel } from '../../model/user.model';
+import { RecommendationModel } from '../../model/recommendation.model';
+import { Observable } from 'rxjs';
+import { RecommendationService } from '../recommendation/recommendation.service';
+import { ClientI } from '../../model/interfaces/client-i.model';
+import { JobPostModel } from '../../model/job-post.model';
+import { JobPostCard } from '../../pages/home/entity/job-post.card';
+import { IonCardSubtitle } from '@ionic/angular';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClientService implements ClientI {
+  private likedJobs: Array<{ card }> = [];
+
   constructor(
     @Inject(RecommendationService)
     private recommendationService: RecommendationService
@@ -54,6 +58,15 @@ export class ClientService implements ClientI {
       job.uuid
     );
     return true;
+  }
+
+  addLikedJobs(card) {
+    this.likedJobs.push(card);
+    console.log(this.likedJobs);
+  }
+
+  getLikedJobs(): Array<{ card }> {
+    return this.likedJobs;
   }
 
   private updateRecommendationHistory(

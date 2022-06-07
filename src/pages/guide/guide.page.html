@@ -1,3 +1,13 @@
+<ion-header>
+<ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button
+                text="{{'global.back' | translate}}">
+        </ion-back-button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true" [scrollX]="false" [scrollY]="false">
     <ion-slides pager="true" no-bounce>
         <ion-slide *ngFor="let slide of slides">
