@@ -1,12 +1,18 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button
-                    text="{{'global.back' | translate}}">
-            </ion-back-button>
-        </ion-buttons>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="{{'global.back' | translate}}"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
+  <ion-list>
+    <div *ngFor="let job of likedJobs">
+      <ion-item>
+        <ion-label>{{job.title}}:</ion-label>
 
+        <ion-text>{{job.shortDescription}}</ion-text>
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>
