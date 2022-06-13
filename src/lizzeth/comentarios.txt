@@ -1,0 +1,12 @@
+Cambios Visuales:
+- Inicialmente debemos hacer énfasis en el nombre de la aplicacion.
+- La pantalla no es responsive, una vez mostrada en pantalla completa el contenido esta distorsionado.
+- Encontrar imagenes más intuitivas, por ejemplo la estrella y corazon no hacen enfasis en una funcionalidad concreta.
+- La parte de guide no me parece una funcionalidad relevante para que este en el flujo de home, eso debería estar al inicio, antes de que el usuario inicie sesión o se registre, guide considero que es una sección informativa, no parte fundamental del flujo.
+
+-----------------------------------------------
+- Respecto a la estructura, las carpetas de(header y tiender-ui) trasladarlas a la carpeta de pages/home ya que es parte de ella también.
+- Cada uno de los módulos: chat,home, profile podrian contener pruebas unitarias para hacer pruebas de su correcto funcionamiento.
+Buenas Prácticas:
+- Una falencia que encontré es que en home.page.html hay un bloque de código comentado, en cual no es una buena práctica si es que a final no lo vamos a utilizar.
+- Se sugiere tener una buena documentacion de este proyecto, con la explicación de la estructura.
