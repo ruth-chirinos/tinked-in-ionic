@@ -1,0 +1,12 @@
+Habiendo revisado el código con el mayor detalle posible, quisiera destacar algunas sugerencias para mejorar o qué podría desarrollarse a futuro en el proyecto.
+* La carpeta components, tiene 2 folders (header y tinder-ui) los cuales son utilizados únicamente por la home page. En caso que se mantenga de esta forma se sugiere reestructurar las carpetas, llevándolas al folder home para mantener un orden de archivos utilizados en cada sector. En caso que sea el header o el tinder-ui se utilicen en otros archivos, realizar comentarios de dónde se están utilizando para hacer seguimiento del código.
+* Se realizaron pruebas con las job-cards, para comenzar, no es evidente que al desplazar la tarjeta se está realizando "pass", dado que aparecen los logos de like (heart) y dislike (x symbol). Se propone lo siguiente:
+  * Crear una ventana emergente o un ejemplo temporal de cómo poder realizar el pass, para que los usuarios no se confundan o piensen que esa funcionalidad no existe
+  * Restringir que el like y dislike se realicen sólo con los botones, y que cualquier desplazamiento de la tarjeta represente el pass, dado que en muchos casos la calibración de esta acción no era la correcta, provocando que ninguna acción sea realizada pese a que la tarjeta ya fue desplazada. Esta solución se propone de forma permamente, mientras se hacen ajustes y pruebas respecto a esta calibración.
+* Generar un componente para la creación y publicación de trabajos.
+* Generar un componente para el login y registro de usuarios a nivel frontend, con la validación necesaria de los campos.
+* Utilizar el servicio api para poder realizar la conexión con un futuro backend, crear los métodos post, put, get, patch y delete apuntando a las direcciones correspondientes. 
+  * Realizar la instalación de servicios backend como Express para facilitar las conexiones
+  * Crear una base de datos e igual conectarla por medio de los servicios api
+* Una vez creada la base de datos con sus conexiones correspondientes, eliminar los mocks de datos para realizar pruebas de post de trabajos y poder mostrarlos con el mismo diseño frontend; realizar login de usuarios y autenticarlos mediante la generación de un token temporal para su sesión activa, empleando los modelos para los diferentes tipos de usuarios.
+* Crear un compoente para la muestra de mayor información de la publicación de un trabajo, a la cual se pueda acceder pulsando el botón star en el home, que por el momento no realiza ninguna acción.
