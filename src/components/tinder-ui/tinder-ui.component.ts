@@ -71,16 +71,13 @@ export class TinderUiComponent implements OnChanges, AfterViewInit {
         }
         if (heart) {
             this.tinderCardsArray[0].nativeElement.style.transform = 'translate(' + this.moveOutWidth + 'px, -100px) rotate(-30deg)';
-            this.like(this.cards[0]);
             this.toggleChoiceIndicator(false, true);
         } else {
             this.tinderCardsArray[0].nativeElement.style.transform = 'translate(-' + this.moveOutWidth + 'px, -100px) rotate(30deg)';
-            this.disLike(this.cards[0]);
             this.toggleChoiceIndicator(true, false);
         }
         this.shiftRequired = true;
         this.transitionInProgress = true;
-        this.next(null);
     }
 
     toggleChoiceIndicator(cross: boolean, heart: boolean) {
@@ -165,16 +162,16 @@ export class TinderUiComponent implements OnChanges, AfterViewInit {
         this.cards.shift();
         this.currentPosition++;
 
-        if (event) {
-            const endX = Math.max(Math.abs(event.velocityX) * this.moveOutWidth, this.moveOutWidth);
-            const toX = event.deltaX > 0 ? endX : -endX;
-            const endY = Math.abs(event.velocityY) * this.moveOutWidth;
-            const toY = event.deltaY > 0 ? endY : -endY;
-            const xMulti = event.deltaX * 0.03;
-            const yMulti = event.deltaY / 80;
-            const rotate = xMulti * yMulti;
-            this.renderer.setStyle(this.tinderCardsArray[0].nativeElement, 'transform', 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)');
-        }
+        
+        const endX = Math.max(Math.abs(event.velocityX) * this.moveOutWidth, this.moveOutWidth);
+        const toX = event.deltaX > 0 ? endX : -endX;
+        const endY = Math.abs(event.velocityY) * this.moveOutWidth;
+        const toY = event.deltaY > 0 ? endY : -endY;
+        const xMulti = event.deltaX * 0.03;
+        const yMulti = event.deltaY / 80;
+        const rotate = xMulti * yMulti;
+        this.renderer.setStyle(this.tinderCardsArray[0].nativeElement, 'transform', 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)');
+       
         this.shiftRequired = true;
     }
 
